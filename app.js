@@ -12,7 +12,7 @@ dotenv.config()
 
 app.use(
   cors({
-    origin: 'https://phoenix-proshop.onrender.com/',
+    origin: 'https://phoenix-proshop.onrender.com',
   })
 )
 
