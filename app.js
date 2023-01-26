@@ -17,10 +17,10 @@ app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
 
 // static paths
-app.use(express.static(path.join(__dirname, './frontend/build')))
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './frontend/build/index.html'))
-})
+// app.use(express.static(path.join(__dirname, './frontend/build')))
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, './frontend/build/index.html'))
+// })
 app.use(notFound)
 app.use(errorHandler)
 const PORT = process.env.PORT || 5000
