@@ -5,10 +5,16 @@ import connectDB from './config/connect.js'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
-import path from 'path'
+import cors from 'cors'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 const app = express()
 dotenv.config()
+
+app.use(
+  cors({
+    origin: 'https://phoenix-proshop.onrender.com/',
+  })
+)
 
 connectDB()
 app.use(express.json())
